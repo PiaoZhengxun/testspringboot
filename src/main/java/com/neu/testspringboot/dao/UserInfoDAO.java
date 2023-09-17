@@ -41,7 +41,7 @@ public class UserInfoDAO {
         Iterator<UserInfo> iterator = resultSet.iterator();
         while (iterator.hasNext()){
             UserInfo userInfo = iterator.next();
-            list.add(userInfo);
+//            list.add(userInfo);
         }
 
         return list;

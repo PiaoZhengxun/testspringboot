@@ -10,10 +10,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class HelloService {
 
-//    @Autowired
-//    HelloDao helloDao;
+    @Autowired
+    HelloDao helloDao;
 
-    static HelloDao helloDao = HelloDao.getHelloDaoInstance();
+//    static HelloDao helloDao = HelloDao.getHelloDaoInstance();
 
     public String verifyUserInfo1(UserLogin userLogin){
         String msg;

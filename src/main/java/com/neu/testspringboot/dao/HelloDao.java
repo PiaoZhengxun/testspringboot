@@ -4,15 +4,21 @@ import com.neu.testspringboot.dto.UserLogin;
 import com.neu.testspringboot.dto.UserStatus;
 import com.neu.testspringboot.entity.UserInfo;
 import com.neu.testspringboot.tempDBResult.CountResult;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Repository;
 
 import java.util.HashSet;
 import java.util.Iterator;
 
-@Repository
+//@Repository
+//@Scope("prototype")
 public class HelloDao {
 
 
+//    private HelloDao(){}
+
+
+    public String ObjectName;
     //Singleton
     private static HelloDao helloDao = null;
 

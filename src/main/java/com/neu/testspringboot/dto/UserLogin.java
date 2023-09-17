@@ -4,15 +4,15 @@ import java.io.Serializable;
 
 public class UserLogin implements Serializable {
 
-    private String username;
+    private String userName;
     private String password;
 
-    public String getUsername() {
-        return username;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getPassword() {
@@ -26,7 +26,7 @@ public class UserLogin implements Serializable {
     @Override
     public String toString() {
         return "UserLogin{" +
-                "username='" + username + '\'' +
+                "username='" + userName + '\'' +
                 ", password='" + password + '\'' +
                 '}';
     }

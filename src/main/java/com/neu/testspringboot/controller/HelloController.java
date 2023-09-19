@@ -1,17 +1,15 @@
 package com.neu.testspringboot.controller;
 
 import com.neu.testspringboot.dto.UserLogin;
-import com.neu.testspringboot.service.HelloService;
+import com.neu.testspringboot.service.serviceImpl.HelloServiceImpl;
 import jakarta.annotation.Resource;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class HelloController {
 
-    @Resource(name="helloService")
-    HelloService helloService;
+    @Resource(name= "helloServiceImpl")
+    HelloServiceImpl helloService;
 
     @PostMapping("/verifyUserInfo1")
     public String verifyUserInfo1(@RequestBody UserLogin userLogin){

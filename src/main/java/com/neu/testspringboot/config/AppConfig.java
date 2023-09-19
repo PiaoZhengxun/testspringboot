@@ -1,6 +1,6 @@
 package com.neu.testspringboot.config;
 
-import com.neu.testspringboot.dao.HelloDao;
+import com.neu.testspringboot.dao.daoImpl.HelloDaoImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
@@ -10,8 +10,8 @@ public class AppConfig {
 
     @Bean("helloDaoBean")
     @Scope("prototype")
-    public HelloDao helloDao() {
-        HelloDao helloDao = HelloDao.getHelloDaoInstance();
+    public HelloDaoImpl helloDao() {
+        HelloDaoImpl helloDao = HelloDaoImpl.getHelloDaoInstance();
         System.out.println("Call THIS METHOD");
 //        HelloDao helloDao = new HelloDao();
         helloDao.ObjectName = "HelloDayByConfig";

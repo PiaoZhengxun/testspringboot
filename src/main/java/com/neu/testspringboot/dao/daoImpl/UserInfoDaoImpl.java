@@ -1,6 +1,7 @@
-package com.neu.testspringboot.dao;
+package com.neu.testspringboot.dao.daoImpl;
 
-import com.neu.testspringboot.dto.UserLogin;
+import com.neu.testspringboot.dao.UserInfoDao;
+import com.neu.testspringboot.dao.baseDao.BaseDaoImpl;
 import com.neu.testspringboot.entity.UserInfo;
 import org.springframework.stereotype.Repository;
 
@@ -10,7 +11,7 @@ import java.util.Iterator;
 import java.util.List;
 
 @Repository
-public class UserInfoDAO {
+public class UserInfoDaoImpl extends BaseDaoImpl implements UserInfoDao {
 
     public List<UserInfo> findAll() { //first way, the simple one, to get the all eneity into the table
 
@@ -41,7 +42,7 @@ public class UserInfoDAO {
         Iterator<UserInfo> iterator = resultSet.iterator();
         while (iterator.hasNext()){
             UserInfo userInfo = iterator.next();
-//            list.add(userInfo);
+            list.add(userInfo);
         }
 
         return list;

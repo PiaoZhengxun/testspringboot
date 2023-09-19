@@ -1,32 +1,17 @@
 package com.neu.testspringboot.service;
 
-import com.neu.testspringboot.dao.UserInfoDAO;
 import com.neu.testspringboot.dto.Message;
-import com.neu.testspringboot.entity.UserInfo;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import com.neu.testspringboot.dto.Message2;
+import com.neu.testspringboot.dto.Message3;
+import com.neu.testspringboot.dto.Message4;
+import com.neu.testspringboot.service.baseService.BaseService;
+import com.neu.testspringboot.service.baseService.BaseServiceImpl;
 
-import java.util.List;
+public interface UserInfoService extends BaseService {
 
-@Service
-public class UserInfoService {
+    public Message findAll();
+    public Message2 findAll2();
+    public Message3 findAll3();
+    public Message4 findAll4();
 
-    @Autowired
-    UserInfoDAO userInfoDAO;
-
-    public Message findAll(){
-        Message message = new Message();
-        List<UserInfo> list = userInfoDAO.findAll();
-
-        if (list.size() < 1) {
-            message.setStatusCode(400);
-            message.setMsg("error");
-        } else {
-            message.setStatusCode(200);
-            message.setMsg("OK");
-            message.setObj(list);
-        }
-
-        return message;
-    }
 }
